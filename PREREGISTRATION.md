@@ -1,5 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
-Warning: s was declared with const; use let for reassignable variables.
 # Preregistration for Held-Out Twitter Cache Cluster Evaluation
 
 **Status:** Publicly committed before held-out trace download or analysis in commit `731472f79b6bc83800b6858604b3a73e7bfee613`. Existing cluster52 and synthetic-trace results are exploratory and are not part of this confirmatory evaluation.

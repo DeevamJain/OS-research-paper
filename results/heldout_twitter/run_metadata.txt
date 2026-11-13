@@ -1,5 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
-Warning: s was declared with const; use let for reassignable variables.
 Trace replay execution record
 Retrieval date: 2026-11-13 (UTC date)
 Python: Python 3.12.14

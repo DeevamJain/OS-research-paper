@@ -1,5 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
-Warning: s was declared with const; use let for reassignable variables.
 "cluster","source_url","retrieved_utc","bytes","sha256"
 "18","https://cachemon.s3.amazonaws.com/cluster18.oracleGeneral.sample10.zst","2026-11-13","6948656970","b873a9e1416a76234d4dc23018d51fd3e7cb2c0f846eca7298c4129290eb84c9"
 "20","https://cachemon.s3.amazonaws.com/cluster20.oracleGeneral.sample10.zst","2026-11-13","1398820931","324af005e1afe747a600d2fcf4ca7a96e124bf74be3e47906e2a14639dbb970b"

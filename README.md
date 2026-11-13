@@ -1,5 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
-Warning: s was declared with const; use let for reassignable variables.
 # OS cache artifact audit replication package
 
 This package contains the final manuscript, its preregistered held-out Twitter replay, raw policy outcomes, paired block differences, source-run logs, and trace-selection metadata. The held-out replay is complete. The privileged Linux pilot was not run because this host did not expose the required delegated cgroup v2, BPF, BTF, and PSI capabilities; Table 13b reports `Not run` rather than invented outcomes.

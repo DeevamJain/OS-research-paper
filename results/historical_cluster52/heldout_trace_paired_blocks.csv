@@ -1,5 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
-Warning: s was declared with const; use let for reassignable variables.
 trace,cluster,capacity,block_index,paired_delta_original_minus_scan_rule_pp
 twitter_cluster52_10m.csv.zst,twitter_cluster52_10m,64,0,9.78
 twitter_cluster52_10m.csv.zst,twitter_cluster52_10m,64,1,7.52

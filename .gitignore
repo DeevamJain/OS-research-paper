@@ -1,4 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
 # Large public trace inputs are downloaded from the cacheMon dataset bucket and
 # are not stored in Git. Retain trace_selection.log and traces.sha256 instead.
 *.zst

@@ -1,0 +1,26 @@
+Warning: fs was declared with const; use let for reassignable variables.
+Warning: s was declared with const; use let for reassignable variables.
+Trace replay execution record
+Retrieval date: 2026-11-13 (UTC date)
+Python: Python 3.12.14
+zstandard: 0.25.0
+Runner: extended_experiment.py
+Runner SHA-256: 8f5153bbdbb8ef2c737189a11468bb986e40de5c1f3af1aede38dff6c4f19cec
+Request limit: 1,000,000 per trace
+Warm-up: 100,000 requests
+Measured requests: 900,000 per trace
+Capacities: 64, 256, 1,024 slots
+Policies: LRU, ARC, S3-FIFO, SIEVE, Original-score, No-override, Observed-one-hit, Active-inactive-approx, Scan-rule-LRU
+Block length: 10,000 requests
+Bootstrap replicates: 10,000
+Bootstrap seed: 20261114
+Registered contrast: Original-score minus Scan-rule-LRU
+Registered margin: +/-0.50 percentage points; equivalence requires whole 90% CI inside margin
+
+Execution command for clusters 20 and 37:
+python extended_experiment.py --trace source-ebpf-ml-cache/traces/cluster20.oracleGeneral.sample10.zst source-ebpf-ml-cache/traces/cluster37.oracleGeneral.sample10.zst --out final-repo/results/heldout_twitter --limit 1000000 --warmup 100000
+
+Execution command for cluster 18:
+python extended_experiment.py --trace source-ebpf-ml-cache/traces/cluster18.oracleGeneral.sample10.zst --out final-repo/results/heldout_twitter --limit 1000000 --warmup 100000
+
+Final package CSVs were merged by cluster order 18, 37, 20 and capacity. All full trace files were then validated against their expected object lengths and SHA-256 values recorded in traces.sha256.

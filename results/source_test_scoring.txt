@@ -1,0 +1,52 @@
+Warning: fs was declared with const; use let for reassignable variables.
+Warning: s was declared with const; use let for reassignable variables.
+============================================================
+  eBPF ML Scoring Function — Unit Tests
+  Mirrors src/cache_evict.bpf.c scoring logic
+============================================================
+
+Test: Scan Override
+  ✅ PASS: Scan page (freq=1) score=2.010 >= 2.0
+  ✅ PASS: Scan page (freq=2) score=2.010 >= 2.0
+  ✅ PASS: Scan page (freq=3) score=0.326 < 2.0 (no override)
+
+Test: Hot Page Protection
+  ✅ PASS: Hot page score=0.017 < 0.3 (protect)
+  ✅ PASS: Hot page not evicted
+
+Test: Cold Page Eviction
+  ✅ PASS: Cold page score=0.912 > 0.55 (evict)
+  ✅ PASS: Cold page is evicted
+
+Test: Scan Beats Cold Pages
+  ✅ PASS: Scan score=2.010 > cold score=0.912
+
+Test: Scan Beats Hot Pages
+  ✅ PASS: Scan score=2.006 > hot score=0.023 (scan evicted first)
+
+Test: Refault Protection
+  ✅ PASS: Refault score=0.170 < normal=0.520 (protected)
+  ✅ PASS: Refault penalty >= 0.30pp (actual: 0.350)
+
+Test: Frequency Dominates Recency
+  ✅ PASS: Low-freq score=0.837 > high-freq=0.395
+
+Test: Score Range
+  ✅ PASS: Score 0.011 in [-0.5, 1.0] for args=(1, 20, 0.1, False)
+  ✅ PASS: Score 0.912 in [-0.5, 1.0] for args=(100, 1, 100, False)
+  ✅ PASS: Score 0.558 in [-0.5, 1.0] for args=(50, 5, 10, False)
+  ✅ PASS: Score -0.289 in [-0.5, 1.0] for args=(5, 10, 1, False, True)
+
+Test: Eviction Priority Ordering
+  Eviction order (highest score first):
+    scan_new       : 2.0020 ← evict first
+    cold_old       : 0.9117 
+    warm           : 0.4212 
+    hot            : 0.0333 
+    refaulted      : 0.0057 
+  ✅ PASS: scan_new evicted first (score=2.002)
+  ✅ PASS: refaulted page is most protected / evicted last (score=0.006)
+
+============================================================
+  Results: 18/18 passed  ✅ ALL TESTS PASSED
+============================================================

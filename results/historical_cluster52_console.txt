@@ -1,0 +1,6 @@
+Warning: fs was declared with const; use let for reassignable variables.
+Warning: s was declared with const; use let for reassignable variables.
+twitter_cluster52_10m.csv.zst C=64: Original=75.8179% Scan-rule-LRU=64.3899% delta=11.4280 pp 90%CI=[11.0377,11.8133] equivalent=False
+twitter_cluster52_10m.csv.zst C=256: Original=69.2128% Scan-rule-LRU=55.6787% delta=13.5341 pp 90%CI=[13.2236,13.8627] equivalent=False
+twitter_cluster52_10m.csv.zst C=1024: Original=58.6031% Scan-rule-LRU=47.0703% delta=11.5328 pp 90%CI=[10.4208,12.5940] equivalent=False
+Wrote results\historical_cluster52\heldout_trace_raw.csv and results\historical_cluster52\heldout_trace_paired_blocks.csv

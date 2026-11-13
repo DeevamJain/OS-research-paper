@@ -1,6 +1,8 @@
+Warning: fs was declared with const; use let for reassignable variables.
+Warning: s was declared with const; use let for reassignable variables.
 # Preregistration for Held-Out Twitter Cache Cluster Evaluation
 
-**Status:** Draft prepared before any new held-out trace runs. The preregistration becomes public and time-stamped only when committed to the repository. Existing cluster52 and synthetic-trace results are exploratory and are not part of this confirmatory evaluation.
+**Status:** Publicly committed before held-out trace download or analysis in commit `731472f79b6bc83800b6858604b3a73e7bfee613`. Existing cluster52 and synthetic-trace results are exploratory and are not part of this confirmatory evaluation.
 
 ## Primary hypothesis and practical margin
 
@@ -51,4 +53,5 @@ For every downloaded trace, record the source URL, retrieval date, byte size, an
 - Add Table 9b with one row per cluster and capacity, showing paired policy miss rates, paired difference, 90% interval, and the equivalence decision.
 - Report null, mixed, adverse, failed, or incomplete results plainly. Do not tune policies or preprocessing after viewing held-out outcomes.
 - This registration does not cover the separate privileged Linux evaluation, reference verification, human audit, second-repository analysis, archival DOI deposit, or paper-wide edits; those require their own recorded evidence and actual outputs.
+
 
